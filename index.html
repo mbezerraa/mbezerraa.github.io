@@ -27,6 +27,13 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
         .profile-photo {
@@ -82,22 +89,85 @@
         .buttons a.github:hover {
             background-color: #555;
         }
+
+        .projects {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .projects h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: left;
+        }
+
+        .project-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .project-photo {
+            width: 150px;
+            height: 100px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .project-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-info h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .project-info p {
+            font-size: 14px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="profile-photo">
-            <img src="photos/murilo.jpeg" alt="Profile Photo">
+        <div class="profile-section">
+            <div class="profile-photo">
+                <img src="photos/murilo.jpeg" alt="Profile Photo">
+            </div>
+            <div class="info">
+                <h2>Murilo Bezerra</h2>
+                <p>Computer Science Student</p>
+                <br>
+                <div class="buttons">
+                    <a href="https://www.linkedin.com/in/mbezerraa/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/mbezerraa" target="_blank" class="github">GitHub</a>
+                </div>
+            </div>
         </div>
-        <div class="info">
-            <h2>Murilo Bezerra</h2>
-            <p>Computer Science Student</p>
-            <br>
-            <p>See my works:</p>
-            
-            <div class="buttons">
-                <a href="https://www.linkedin.com/in/mbezerraa/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/mbezerraa" target="_blank" class="github">GitHub</a>
+
+        <div class="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <div class="project-photo">
+                    <img src="photos/copykitt.png" alt="Project Photo">
+                </div>
+                <div class="project-info">
+                    <h3>Copykitt</h3>
+                    <p>This is a SaaS application that generates AI branding snippets and keywords.</p>
+                    <a href="https://github.com/mbezerraa/copykitt"><p>See the repository here</p></a>
+                </div>
             </div>
         </div>
     </div>
